@@ -5,7 +5,7 @@
 A simple app inspired by the toy Magic Eight Ball
 - Shake your phone to get the answer to your question
 - Choose another **category** to get a random reply to this category
-- Customizable category and reply, so you can decide what your options are and let fate pick out the answer
+- Customizable categories and replies, so you can decide what your options are and let fate pick out an answer
 
 ![](./doc/pre.jpg)
 
