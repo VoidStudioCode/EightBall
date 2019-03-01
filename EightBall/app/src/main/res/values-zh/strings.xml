@@ -1,0 +1,93 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Eight Ball</string>
+    <string name="error_occur">程序出现错误</string>
+
+    <!--Settings-->
+    <string name="category">类别</string>
+    <string name="new_category">新类别</string>
+    <string name="new_category_name">新类别名称</string>
+    <string name="category_exists">该类别已存在</string>
+    <string name="new_item_name">新条目名称</string>
+    <string name="item_exists">该条目已存在</string>
+    <string name="can_not_delete">不能删除这个条目</string>
+    <string name="delete">确认删除%s？</string>
+    <string name="add">添加</string>
+    <string name="empty">不能为空</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <!--About-->
+    <string name="about">关于</string>
+    <string name="developer">开发者：i605</string>
+    <string name="update">更新日志：</string>
+    <string name="open_source_licenses">开源代码许可</string>
+
+    <!--Fortune Telling-->
+    <string name="think_and_give_it_a_shake">默念你的问题\n摇一摇你的手机</string>
+    <string name="fortune_telling">运势占卜</string>
+    <string-array name="fortune_telling">
+        <item>这是肯定的</item>
+        <item>显然是这样</item>
+        <item>不用怀疑</item>
+        <item>是的，毫无疑问</item>
+        <item>你可以相信是这样</item>
+        <item>如我所见，是的</item>
+        <item>很有可能</item>
+        <item>前景不错</item>
+        <item>是的</item>
+        <item>迹象表明，是的</item>
+        <item>回复不确定，再试试</item>
+        <item>待会再问</item>
+        <item>最好现在不告诉你</item>
+        <item>现在无法预测</item>
+        <item>专心再问一遍</item>
+        <item>别指望</item>
+        <item>我的回复是“不”</item>
+        <item>我得到的回复是“不”</item>
+        <item>前景不太好</item>
+        <item>深表怀疑</item>
+    </string-array>
+
+    <!--Food-->
+    <string name="give_it_a_shake">摇一摇你的手机</string>
+    <string name="what_to_eat">吃什么</string>
+    <string-array name="what_to_eat" tools:ignore="InconsistentArrays">
+        <item>盖浇饭</item>
+        <item>砂锅</item>
+        <item>米线</item>
+        <item>西餐</item>
+        <item>麻辣烫</item>
+        <item>自助餐</item>
+        <item>炒面</item>
+        <item>快餐</item>
+        <item>水果</item>
+        <item>馄饨</item>
+        <item>火锅</item>
+        <item>烧烤</item>
+        <item>泡面</item>
+        <item>速冻水饺</item>
+        <item>日本料理</item>
+        <item>涮羊肉</item>
+        <item>味千拉面</item>
+        <item>肯德基</item>
+        <item>面包</item>
+        <item>扬州炒饭</item>
+        <item>海底捞</item>
+        <item>咖啡</item>
+        <item>比萨</item>
+        <item>麦当劳</item>
+        <item>兰州拉面</item>
+        <item>沙县小吃</item>
+        <item>烤鱼</item>
+        <item>海鲜</item>
+        <item>铁板烧</item>
+        <item>韩国料理</item>
+        <item>粥</item>
+        <item>快餐</item>
+        <item>桂林米粉</item>
+        <item>东南亚菜</item>
+        <item>甜点</item>
+        <item>农家菜</item>
+        <item>川菜</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <color name="colorPrimary">#FF4614B4</color>
+    <color name="colorPrimaryDark">#FF3C1496</color>
+    <color name="colorAccent">#FFFFA000</color>
+    <color name="black">#FF000000</color>
+    <color name="light_purple">#FF4614B4</color>
+    <color name="purple">#FF3C1496</color>
+    <color name="blue">#FF82D7FF</color>
+</resources>
