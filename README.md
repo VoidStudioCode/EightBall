@@ -1,5 +1,5 @@
 # Eight Ball
-### version: 1.0.0
+### Version: 1.0.0
 ![](./doc/logo.png)
 
 A simple app inspired by the toy Magic Eight Ball
@@ -9,5 +9,5 @@ A simple app inspired by the toy Magic Eight Ball
 
 ![](./doc/pre.jpg)
 
-### License
+### License:
 This project is release under the Apache 2.0 license for non-commercial usage. For commercial usage, please contact us for another license.
