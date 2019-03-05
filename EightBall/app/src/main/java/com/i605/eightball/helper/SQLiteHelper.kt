@@ -7,6 +7,7 @@ import com.i605.eightball.*
 
 object SQLiteHelper : SQLiteOpenHelper(App.getAppContext(), "Data.db", null, 1) {
     private var count = AtomicInteger()
+    private lateinit var sqlDatabase: SQLiteDatabase
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE ITEMS (CATEGORY NVARCHAR(50), NAME NVARCHAR(50))")
@@ -30,14 +31,18 @@ object SQLiteHelper : SQLiteOpenHelper(App.getAppContext(), "Data.db", null, 1) 
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {}
 
-    override fun getReadableDatabase(): SQLiteDatabase {
-        count.incrementAndGet()
-        return super.getReadableDatabase()
+    @Synchronized
+    fun getDatabase(): SQLiteDatabase {
+        if (count.incrementAndGet() == 1) {
+            sqlDatabase = super.getReadableDatabase()
+        }
+        return sqlDatabase
     }
 
-    override fun close() {
+    @Synchronized
+    fun closeDatabase() {
         if (count.decrementAndGet() == 0) {
-            super.close()
+            sqlDatabase.close()
         }
     }
 }
