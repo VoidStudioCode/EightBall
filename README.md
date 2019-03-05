@@ -1,5 +1,5 @@
 # Eight Ball
-### Version: 1.0.0
+### Version: 1.1.0
 ![](./doc/logo.png)
 
 A simple app inspired by the toy Magic Eight Ball
