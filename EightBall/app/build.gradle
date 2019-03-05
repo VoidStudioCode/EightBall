@@ -9,15 +9,15 @@ android {
         applicationId "com.i605.eightball"
         minSdkVersion 24
         targetSdkVersion 28
-        versionCode 100
-        versionName "1.0"
+        versionCode 101
+        versionName "1.1"
     }
     buildTypes {
         release {
             zipAlignEnabled true
-            minifyEnabled false
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     android.applicationVariants.all { variant ->
