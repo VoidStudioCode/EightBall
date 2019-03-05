@@ -10,7 +10,7 @@ object Manager {
 
     init {
         val temp = mutableListOf<List<String>>()
-        val db = SQLiteHelper.readableDatabase
+        val db = SQLiteHelper.getDatabase()
         val cursor = db.query("ITEMS", arrayOf("CATEGORY", "NAME"), null, null, null, null, null)
         while (cursor.moveToNext()) {
             val cat = cursor.getString(cursor.getColumnIndex("CATEGORY"))
@@ -18,7 +18,7 @@ object Manager {
             temp.add(listOf(cat, name))
         }
         cursor.close()
-        db.close()
+        SQLiteHelper.closeDatabase()
 
         temp.groupBy { list -> list[0] }.forEach { k, v ->
             val item = Item(k)
@@ -40,23 +40,23 @@ object Manager {
         item.list.add(name)
         list.add(item)
 
-        val db = SQLiteHelper.readableDatabase
+        val db = SQLiteHelper.getDatabase()
         val contentValues = ContentValues()
         contentValues.put("CATEGORY", cat)
         contentValues.put("NAME", name)
         db.insert("ITEMS", null, contentValues)
-        db.close()
+        SQLiteHelper.closeDatabase()
     }
 
     fun addItem(cat: String, name: String) {
         list.first { item -> item.category == cat }.list.add(name)
 
-        val db = SQLiteHelper.readableDatabase
+        val db = SQLiteHelper.getDatabase()
         val contentValues = ContentValues()
         contentValues.put("CATEGORY", cat)
         contentValues.put("NAME", name)
         db.insert("ITEMS", null, contentValues)
-        db.close()
+        SQLiteHelper.closeDatabase()
     }
 
     fun canDelete(cat: String): Boolean {
@@ -71,9 +71,9 @@ object Manager {
     fun deleteItem(cat: String, name: String): Boolean {
         val item = list.first { item -> item.category == cat }
         item.list.remove(name)
-        val db = SQLiteHelper.readableDatabase
+        val db = SQLiteHelper.getDatabase()
         db.delete("ITEMS", "CATEGORY = ? AND NAME = ?", arrayOf(cat, name))
-        db.close()
+        SQLiteHelper.closeDatabase()
 
         return if (item.list.isEmpty()) {
             list.remove(item)

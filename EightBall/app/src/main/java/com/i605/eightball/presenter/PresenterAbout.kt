@@ -20,6 +20,10 @@ class PresenterAbout(private val activity: ActivityAbout) {
 
     private fun updateHistory(): String {
         return "" +
+                "版本 1.1\n" +
+                "    01.优化数据库访问\n" +
+                "    02.调整传感器敏感度\n" +
+                "\n" +
                 "版本 1.0\n" +
                 "    01.初始版本\n"
     }

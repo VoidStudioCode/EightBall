@@ -61,7 +61,7 @@ class PresenterMain(private val activity: ActivityMain) {
             val z = event.values[2]
 
             val delta = Math.sqrt(Math.pow((x + y + z - SensorManager.GRAVITY_EARTH).toDouble(), 2.0)).toFloat()
-            if (delta > 10) {
+            if (delta > 15) {
                 Log.i("delta: ", delta.toString())
                 if (lastTime == 0L) {
                     lastTime = System.currentTimeMillis()
