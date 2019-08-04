@@ -10,4 +10,4 @@ A simple app inspired by the toy Magic Eight Ball
 ![](./doc/pre.jpg)
 
 ### License:
-This project is release under the Apache 2.0 license for non-commercial usage. For commercial usage, please contact us for another license.
+This project is released under the Apache 2.0 license for non-commercial usage. For commercial usage, please contact us for another license.
